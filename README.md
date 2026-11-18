@@ -1,7 +1,6 @@
 # Java4Shell (CVE-2026-114938) Toolkit Vairav Technology CSOC
 
-Companion to advisory **VTS-SA-2026-1118-JAVA4SHELL**. TLP:CLEAR.
-Full instructions: `Java4Shell_Check_and_Mitigation_Guide.docx`. Advisory: `VTS-SA-2026-1118-JAVA4SHELL.docx`.
+Full instructions: `Java4Shell_Check_and_Mitigation_Guide.docx`.
 
 A server is exposed only if **all three** are true:
 1. x86-64 CPU with AVX-512 VBMI (Intel Ice Lake+ / AMD Zen 4+)

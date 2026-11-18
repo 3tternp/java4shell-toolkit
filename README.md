@@ -32,11 +32,11 @@ A server is exposed **only when all three conditions are true**:
 
 | # | Condition | Detail |
 |---|---|---|
-| 1️⃣ | 🖥️ **CPU** | x86-64 with `avx512f`, `avx512bw`, `avx512vbmi`, `bmi2` — Intel Xeon Ice Lake or newer, AMD Zen 4 or newer. ARM64 is **not** affected. |
+| 1️⃣ | 🖥️ **CPU** | x86-64 with `avx512f`, `avx512bw`, `avx512vbmi`, `bmi2` Intel Xeon Ice Lake or newer, AMD Zen 4 or newer. ARM64 is **not** affected. |
 | 2️⃣ | ☕ **Java build** | A *running* JVM on 17.0.6+ (17 line), or unpatched 21 / 25 / 27, or 8u511b33-perf |
 | 3️⃣ | 🚩 **No mitigation** | The JVM does **not** have `-XX:-UseBASE64Intrinsics` active |
 
-> 🛑 **Never test by sending malformed Base64 to a production application** — a failed trigger crashes the JVM.
+> 🛑 **Never test by sending malformed Base64 to a production application** a failed trigger crashes the JVM.
 
 ---
 

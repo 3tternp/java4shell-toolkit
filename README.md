@@ -1,4 +1,4 @@
-# 🧬 Java4Shell Toolkit — CVE-2026-114938
+# 🧬 Java4Shell Toolkit CVE-2026-114938
 
 > **Vairav Technology Security Pvt. Ltd. · Cyber Security Operations Centre (CSOC)**
 > Guide **VTS-TG-2026-1118-JAVA4SHELL** · 🏷️ **TLP:CLEAR** · 18 November 2026
@@ -12,10 +12,10 @@ Scripts to **check** whether servers are exposed to Java4Shell (CVE-2026-114938)
 - [🔬 What makes a server exposed](#-what-makes-a-server-exposed)
 - [🗂️ Package contents](#️-package-contents)
 - [🪪 Requirements](#-requirements)
-- [🐧 Script 1 — Linux check](#-script-1--java4shell_check_linuxsh)
-- [🗝️ Script 2 — Keycloak check](#️-script-2--keycloak_java4shell_checksh)
-- [🧯 Script 3 — Keycloak mitigation and rollback](#-script-3--keycloak_apply_mitigationsh)
-- [🪟 Script 4 — Windows check](#-script-4--java4shell_check_windowsps1)
+- [🐧 Script 1 Linux check](#-script-1--java4shell_check_linuxsh)
+- [🗝️ Script 2 Keycloak check](#️-script-2--keycloak_java4shell_checksh)
+- [🧯 Script 3 Keycloak mitigation and rollback](#-script-3--keycloak_apply_mitigationsh)
+- [🪟 Script 4 Windows check](#-script-4--java4shell_check_windowsps1)
 - [🧮 Reading the results](#-reading-the-results)
 - [📦 Fixed versions](#-fixed-versions)
 - [🐳 Keycloak in Docker](#-keycloak-in-docker)
@@ -118,7 +118,7 @@ Flag     : NOT MITIGATED
 
 ---
 
-## 🗝️ Script 2 — `keycloak_java4shell_check.sh`
+## 🗝️ Script 2 `keycloak_java4shell_check.sh`
 
 Keycloak-focused check for **Debian / Ubuntu**.
 
@@ -144,11 +144,11 @@ It finds Keycloak through the systemd unit's `MainPID`, falling back to a proces
 
 ---
 
-## 🧯 Script 3 — `keycloak_apply_mitigation.sh`
+## 🧯 Script 3 `keycloak_apply_mitigation.sh`
 
 Applies the temporary JVM flag to Keycloak and verifies it — or removes it after patching.
 
-> 🔄 **Restarts Keycloak** — logins are briefly interrupted. Run in a change window, on a test/staging instance first.
+> 🔄 **Restarts Keycloak** logins are briefly interrupted. Run in a change window, on a test/staging instance first.
 
 **Usage**
 
@@ -196,7 +196,7 @@ sudo ./keycloak_java4shell_check.sh        # section 4 → MITIGATED
 
 ---
 
-## 🪟 Script 4 — `java4shell_check_windows.ps1`
+## 🪟 Script 4 `java4shell_check_windows.ps1`
 
 Checks the **CPU model** and **every running Java process** on Windows.
 
@@ -246,7 +246,7 @@ powershell -ExecutionPolicy Bypass -File .\java4shell_check_windows.ps1 | Tee-Ob
 | Debian `openjdk-17` / `openjdk-21` | 🔗 https://security-tracker.debian.org/tracker/CVE-2026-114938 |
 | Red Hat · Temurin · Microsoft · Liberica | ⏳ Not released at time of writing — use the flag |
 
-> 📅 Fix status changes daily — confirm with vendor advisories before closing findings.
+> 📅 Fix status changes daily confirm with vendor advisories before closing findings.
 
 ---
 

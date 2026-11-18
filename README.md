@@ -81,7 +81,7 @@ chmod +x *.sh
 
 ---
 
-## 🐧 Script 1 — `java4shell_check_linux.sh`
+## 🐧 Script 1 `java4shell_check_linux.sh`
 
 Checks the **CPU** and **every running JVM** on any Linux host.
 

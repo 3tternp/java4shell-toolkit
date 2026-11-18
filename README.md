@@ -1,4 +1,4 @@
-# Java4Shell (CVE-2026-114938) Toolkit — Vairav Technology CSOC
+# Java4Shell (CVE-2026-114938) Toolkit Vairav Technology CSOC
 
 Companion to advisory **VTS-SA-2026-1118-JAVA4SHELL**. TLP:CLEAR.
 Full instructions: `Java4Shell_Check_and_Mitigation_Guide.docx`. Advisory: `VTS-SA-2026-1118-JAVA4SHELL.docx`.
@@ -14,8 +14,8 @@ A server is exposed only if **all three** are true:
 |---|---|---|
 | `scripts/java4shell_check_linux.sh` | Any Linux host — CPU + all running JVMs | No |
 | `scripts/keycloak_java4shell_check.sh [service]` | Keycloak on Debian/Ubuntu | No |
-| `scripts/keycloak_apply_mitigation.sh [service]` | Add flag via systemd drop-in, restart, verify | **Yes — restarts Keycloak** |
-| `scripts/keycloak_apply_mitigation.sh --rollback [service]` | Remove flag after patching | **Yes — restarts Keycloak** |
+| `scripts/keycloak_apply_mitigation.sh [service]` | Add flag via systemd drop-in, restart, verify | **Yes restarts Keycloak** |
+| `scripts/keycloak_apply_mitigation.sh --rollback [service]` | Remove flag after patching | **Yes restarts Keycloak** |
 | `scripts/java4shell_check_windows.ps1` | Windows hosts | No |
 
 ## Quick start (Keycloak on Debian)
@@ -29,4 +29,4 @@ sudo apt install --only-upgrade openjdk-21-jre-headless
 sudo ./keycloak_apply_mitigation.sh --rollback
 ```
 
-**Never test by sending malformed Base64 to production — it crashes the JVM.**
+**Never test by sending malformed Base64 to production it crashes the JVM.**

@@ -224,11 +224,11 @@ powershell -ExecutionPolicy Bypass -File .\java4shell_check_windows.ps1 | Tee-Ob
 
 | 🖥️ CPU | ☕ Java version | 🚩 Flag | Verdict |
 |---|---|---|---|
-| NO | Any | Any | 🟢 Not exploitable now — patch on normal schedule |
+| NO | Any | Any | 🟢 Not exploitable now patch on normal schedule |
 | YES | 8 / 11 / 17.0.0–17.0.5 | Any | 🟢 Not affected |
-| YES | Fixed build | Any | 🟢 Patched — remove flag if set |
-| YES | Affected build | MITIGATED | 🟡 Protected — patch when fix is available |
-| YES | Affected build | NOT MITIGATED | 🔴 **VULNERABLE — mitigate now** |
+| YES | Fixed build | Any | 🟢 Patched remove flag if set |
+| YES | Affected build | MITIGATED | 🟡 Protected patch when fix is available |
+| YES | Affected build | NOT MITIGATED | 🔴 **VULNERABLE mitigate now** |
 
 > ☁️ A VM resize or migration can move a workload onto affected hardware. Use the CPU result to prioritise, not to close findings.
 
